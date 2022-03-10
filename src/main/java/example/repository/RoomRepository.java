@@ -8,11 +8,9 @@ import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
 
 import javax.transaction.Transactional;
-import java.util.List;
 
 public interface RoomRepository extends JpaRepository<Room, Long> {
     boolean existsByFloorAndNumberAndSizeAndHotelId(Integer floor, Integer number, Short size, Long id);
-
     @Modifying
     @Transactional
     @Query(value = "DELETE FROM room where hotel_id = ?1",
