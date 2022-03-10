@@ -13,6 +13,7 @@ import java.util.List;
 @RequestMapping("/room")
 @AllArgsConstructor
 public class RoomController {
+
     private final RoomService service;
 
     @GetMapping(value = "/all")
