@@ -1,0 +1,13 @@
+spring:
+  datasource:
+    username: postgres
+    password: sardor
+    url: jdbc:postgresql://localhost:5432/testdb
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        diealect: org.hibernate.dialect.PostgreSQLDialect
+        format_sql: true
