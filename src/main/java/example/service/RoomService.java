@@ -85,7 +85,7 @@ public class RoomService {
 
     public Object getByHotelId(Long id, Integer page) {
         if (!hotelRepository.existsById(id)) return "the hotel isn't found";
-        Pageable pageable = PageRequest.of(page, 10);
+        Pageable pageable = PageRequest.of(page - 1, 10);
         return repository.findAllByHotelId(id, pageable);
     }
 }
